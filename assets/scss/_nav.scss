@@ -1,9 +1,94 @@
+/* primary nav styles
+-------------------------------------------------------------- */
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.main-navigation ul {
+	list-style: none;
+	text-align: center;
+}
+
+.main-navigation li {
+	display: inline-block;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	padding: 8px 16px;
+	font-weight: 900;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+	background-color: #000000;
+	text-align: left;
+	padding: 12px 0px;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a {
+	color: #666666;
+}
+
+.main-navigation ul ul :hover > a {
+	color: #666666;
+}
+
+.main-navigation ul ul a:hover {
+	
+}
+
+.main-navigation ul li:hover > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a {
+	color: #666666;
+}
+
 /* show mobile menu button styling
 --------------------------------------------------*/
 .mobile-menu-icon {
+	/* need this if menu icon should be absolute top left
 	position: absolute;
     top: 0px;
-    right: 8px;
+    right: 8px;*/
+    
+    /* need to remove these if absolute positioned */
+    text-align: right;
+    margin-top: 8px;
+    margin-right: 8px;
+    
     background: none;
     color: #000000;
     transition: all 0.5s ease;
@@ -42,6 +127,8 @@ nav.mobile-menu,
 	z-index: 1000;
 	right: -240px;
 	overflow: scroll;
+	padding-left: 8px;
+	padding-top: 8px;
 }
 /* moves the menu down slightly when the admin bar displays */
 body.admin-bar .mobile-menu {
@@ -109,6 +196,11 @@ body.admin-bar .mobile-menu {
 	nav.mobile-menu,
 	#mobile-menu-icon {
         display: block;
+    }
+    
+    /* remove the main navigation when mobile nav is showing */
+    .largescreen-menu {
+	    display: none;
     }
 
 }

@@ -21,3 +21,22 @@
 </head>
 
 <body <?php body_class(); ?>>
+	
+	<header class="header">
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			
+			<?php
+				
+				wp_nav_menu(
+					array(
+						'theme_location' 	=> 'main_menu',
+						'menu_id' 			=> 'main-menu',
+						'container_class'	=> 'largescreen-menu'
+					)
+				);
+			?>
+			
+		</nav><!-- #site-navigation -->
+		
+	</header>

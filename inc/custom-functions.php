@@ -21,41 +21,34 @@ function wpmarker_mobile_menu_body_class( $classes ) {
 add_filter( 'body_class', 'wpmarker_mobile_menu_body_class' );
 
 /**
- * function wpmarker_output_menu_button()
- * output the menu button in the wp_footer hook
+ * function wpmarker_output_mobile_menu()
+ * output the mobile menu after the main menu
  */
-function wpmarker_output_menu_button() {
-	
-	?>
-	
-	<div id="mobile-menu-icon" class="mobile-menu-icon">
-		<span>Menu</span>
-	</div>
-	
-	<?php
+function wpmarker_output_mobile_menu( $html, $args ) {
 
-}
-
-add_action( 'wp_footer', 'wpmarker_output_menu_button', 20 );
-
-/**
- * function wpmarker_output_menu()
- * output the menu in the wp_footer hook
- */
-function wpmarker_output_menu() { 
-			
-	/* get the header menu */
-	wp_nav_menu(
+	/* check this is the main menu */
+	if( $args->theme_location != 'main_menu' ) {
+		return $html;
+	}
+	
+	/* add the menu icon */
+	$html .= '<div id="mobile-menu-icon" class="mobile-menu-icon"><span>Menu</span></div>';
+	
+	/* add mobile menu to html */
+	$html .= wp_nav_menu(
 		array(
-			'container' => 'nav',
-			'theme_location' => 'mobile_menu',
-			'container_id' => 'mobile-menu',
-			'container_class' => 'mobile-menu',
-			'menu_class' => 'menu-mobile-menu',
-			'menu_id' => false,
+			'container' 		=> 'div',
+			'theme_location' 	=> 'mobile_menu',
+			'container_id'		=> 'mobile-menu',
+			'container_class'	=> 'mobile-menu',
+			'menu_class'		=> 'menu-mobile-menu',
+			'menu_id'			=> 'mobile-menu-list',
+			'echo' 				=> false
 		)
 	);
 	
+	return $html;
+	
 }
 
-add_action( 'wp_footer', 'wpmarker_output_menu', 30 );
+add_filter( 'wp_nav_menu', 'wpmarker_output_mobile_menu', 10, 2 );
