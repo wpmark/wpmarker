@@ -1,6 +1,22 @@
 ( function( $ ) {
 	
-	/* activate fit vids for items inside .entry-content */
+	/**
+	 * removes the no-js body class which is hard coded into body_class in header.php
+	 * adds a body class of js - which is of course added when javascript is on
+	 */
+	var addJsBodyClass = function () {
+		
+		$('body').removeClass('no-js');
+		$('body').addClass('js');
+		
+	};
+	
+	$(document).ready(addJsBodyClass);
+	
+	/**
+	 * acting on the .entry-content divs this activates the fitvids
+	 * library for repsonsive video and iframes
+	 */
 	var fitvids = function() {
 	
 		$(".entry-content").fitVids();
@@ -9,7 +25,10 @@
 	
 	$(document).ready(fitvids);
 	
-	/* handle the mobile navigation */
+	/**
+	 * handles showing the mobile navigation for smaller screens
+	 * activate class toggling when the mobile menu icon is clicked
+	 */
 	var mobilenav = function() {
 		
 		/* when the element with 'show-mobile-menu' id is clicked */
@@ -19,7 +38,7 @@
 			$('.mobile-menu').toggleClass('mobile-menu-open');
 			
 			/* add a 'mobile-menu-push-toleft' body class */
-			$('body').toggleClass('mobile-menu-push-toleft');
+			$('body').toggleClass('mobpush-toleft');
 			
 			/* add an 'active' class to the button */
 			$('.mobile-menu-icon').toggleClass('active');

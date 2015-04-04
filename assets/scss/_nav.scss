@@ -1,23 +1,23 @@
 /* primary nav styles
 -------------------------------------------------------------- */
-.main-navigation {
+.largescreen-menu {
 	clear: both;
 	display: block;
 	width: 100%;
 	text-transform: uppercase;
 }
 
-.main-navigation ul {
+.largescreen-menu ul {
 	list-style: none;
 	text-align: center;
 }
 
-.main-navigation li {
+.largescreen-menu li {
 	display: inline-block;
 	position: relative;
 }
 
-.main-navigation a {
+.largescreen-menu a {
 	display: block;
 	text-decoration: none;
 	color: #000000;
@@ -25,7 +25,7 @@
 	font-weight: 900;
 }
 
-.main-navigation ul ul {
+.largescreen-menu ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
@@ -37,42 +37,42 @@
 	padding: 12px 0px;
 }
 
-.main-navigation ul ul ul {
+.largescreen-menu ul ul ul {
 	left: -999em;
 	top: 0;
 }
 
-.main-navigation ul ul a {
+.largescreen-menu ul ul a {
 	width: 200px;
 }
 
-.main-navigation ul ul li {
+.largescreen-menu ul ul li {
 
 }
 
-.main-navigation li:hover > a {
+.largescreen-menu li:hover > a {
 	color: #666666;
 }
 
-.main-navigation ul ul :hover > a {
+.largescreen-menu ul ul :hover > a {
 	color: #666666;
 }
 
-.main-navigation ul ul a:hover {
+.largescreen-menu ul ul a:hover {
 	
 }
 
-.main-navigation ul li:hover > ul {
+.largescreen-menu ul li:hover > ul {
 	left: auto;
 }
 
-.main-navigation ul ul li:hover > ul {
+.largescreen-menu ul ul li:hover > ul {
 	left: 100%;
 }
 
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
+.largescreen-menu .current_page_item > a,
+.largescreen-menu .current-menu-item > a,
+.largescreen-menu .current_page_ancestor > a {
 	
 }
 
@@ -171,19 +171,19 @@ body.admin-bar .mobile-menu {
 }
 
 /* body classes needs to be added to make it work!! */
-.mobile-menu-push {
+.mobpush {
 	overflow-x: hidden;
 	position: relative;
 	left: 0;
 }
 /* this class is added to the body on button click */
-.mobile-menu-push-toleft {
+.mobpush-toleft {
 	left: -240px;
 }
 
 /* transitions - makes menu ease in not just appear */
 .mobile-menu,
-.mobile-menu-push {
+.mobpush {
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;

@@ -104,27 +104,3 @@ function wpmarker_theme_setup() {
 }
 
 add_action( 'after_setup_theme', 'wpmarker_theme_setup' );
-
-/**
- * function wpmarker_fonts_url()
- * register google fonts for this theme
- * @return string Google fonts URL for the theme.
- */
-function wpmarker_fonts_url() {
-	
-	$fonts_url = '';
-	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
-	
-	/* add a font */
-	$fonts[] = 'Noto Sans:400italic,700italic,400,700';
-
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), '//fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
