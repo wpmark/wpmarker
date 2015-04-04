@@ -1,0 +1,114 @@
+/* show mobile menu button styling
+--------------------------------------------------*/
+.mobile-menu-icon {
+	position: absolute;
+    top: 0px;
+    right: 8px;
+    background: none;
+    color: #000000;
+    transition: all 0.5s ease;
+    display: none;
+    border: none;
+    font-size: 3rem;
+    padding: 0;
+}
+.mobile-menu-icon:hover {
+    color: #666666;
+    cursor: pointer;
+}
+.mobile-menu-icon:before {
+    font-family: "dashicons";
+    content: "\f333";
+}
+.mobile-menu-icon.active:before {
+	font-family: "dashicons";
+    content: "\f158";
+}
+
+/* hide the small menu for none media queried screen sizes */
+nav.mobile-menu,
+.mobile-menu-icon span {
+    display: none;
+}
+
+/* styles for the menu itself
+--------------------------------------------------*/
+.mobile-menu {
+    background: #ECECEC;
+    position: fixed;
+    width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+	right: -240px;
+	overflow: scroll;
+}
+/* moves the menu down slightly when the admin bar displays */
+body.admin-bar .mobile-menu {
+	margin-top: 46px;
+}
+.mobile-menu ul {
+    font-size: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    text-align: left;
+}
+.mobile-menu li {
+    position: relative;
+}
+.mobile-menu a {
+    text-decoration: none;
+    padding: 0.5em;
+    display: block;
+    cursor: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.mobile-menu a:hover {
+    text-decoration: none;
+}
+.mobile-menu ul ul {
+	margin-left: 2rem;
+    border-left: 2px solid #333333;
+}
+.mobile-menu ul ul ul {
+	border-left: none;
+	margin-left: 1rem;
+}
+
+.mobile-menu.mobile-menu-open {
+	right: 0px;
+}
+
+/* body classes needs to be added to make it work!! */
+.mobile-menu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+/* this class is added to the body on button click */
+.mobile-menu-push-toleft {
+	left: -240px;
+}
+
+/* transitions - makes menu ease in not just appear */
+.mobile-menu,
+.mobile-menu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/* this is the break point for when the menu button shows */
+@media only screen and ( max-width: 767px ) {
+
+	/* when windows become small enough, show button to toggle small nav and the small nav itself */
+	nav.mobile-menu,
+	#mobile-menu-icon {
+        display: block;
+    }
+
+}
