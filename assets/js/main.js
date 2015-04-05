@@ -35,7 +35,7 @@
 		$( ".mobile-menu-icon" ).click(function() {
 			
 			/* toggle the class 'mobile-menu-open' on the element with class 'mobile-menu' */
-			$('.mobile-menu').toggleClass('mobile-menu-open');
+			$('.primary-menu').toggleClass('mobile-menu-open');
 			
 			/* add a 'mobile-menu-push-toleft' body class */
 			$('body').toggleClass('mobpush-toleft');

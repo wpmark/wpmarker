@@ -8,7 +8,11 @@
  /* get the header template */
  get_header();
  
- 
+ 	?>
+ 	
+ 	
+ 	
+ 	<?php
  
  /* get the footer template */
  get_footer();

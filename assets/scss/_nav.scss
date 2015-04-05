@@ -1,23 +1,23 @@
 /* primary nav styles
 -------------------------------------------------------------- */
-.largescreen-menu {
+.primary-menu {
 	clear: both;
 	display: block;
 	width: 100%;
 	text-transform: uppercase;
 }
 
-.largescreen-menu ul {
+.primary-menu ul {
 	list-style: none;
 	text-align: center;
 }
 
-.largescreen-menu li {
+.primary-menu li {
 	display: inline-block;
 	position: relative;
 }
 
-.largescreen-menu a {
+.primary-menu a {
 	display: block;
 	text-decoration: none;
 	color: #000000;
@@ -25,7 +25,7 @@
 	font-weight: 900;
 }
 
-.largescreen-menu ul ul {
+.primary-menu ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
@@ -37,42 +37,42 @@
 	padding: 12px 0px;
 }
 
-.largescreen-menu ul ul ul {
+.primary-menu ul ul ul {
 	left: -999em;
 	top: 0;
 }
 
-.largescreen-menu ul ul a {
+.primary-menu ul ul a {
 	width: 200px;
 }
 
-.largescreen-menu ul ul li {
+.primary-menu ul ul li {
 
 }
 
-.largescreen-menu li:hover > a {
+.primary-menu li:hover > a {
 	color: #666666;
 }
 
-.largescreen-menu ul ul :hover > a {
+.primary-menu ul ul :hover > a {
 	color: #666666;
 }
 
-.largescreen-menu ul ul a:hover {
+.primary-menu ul ul a:hover {
 	
 }
 
-.largescreen-menu ul li:hover > ul {
+.primary-menu ul li:hover > ul {
 	left: auto;
 }
 
-.largescreen-menu ul ul li:hover > ul {
+.primary-menu ul ul li:hover > ul {
 	left: 100%;
 }
 
-.largescreen-menu .current_page_item > a,
-.largescreen-menu .current-menu-item > a,
-.largescreen-menu .current_page_ancestor > a {
+.primary-menu .current_page_item > a,
+.primary-menu .current-menu-item > a,
+.primary-menu .current_page_ancestor > a {
 	
 }
 
@@ -111,96 +111,101 @@
 }
 
 /* hide the small menu for none media queried screen sizes */
-nav.mobile-menu,
 .mobile-menu-icon span {
     display: none;
 }
 
-/* styles for the menu itself
+/* styles for the menu itself for smaller screens
 --------------------------------------------------*/
-.mobile-menu {
-    background: #ECECEC;
-    position: fixed;
-    width: 240px;
-	height: 100%;
-	top: 0;
-	z-index: 1000;
-	right: -240px;
-	overflow: scroll;
-	padding-left: 8px;
-	padding-top: 8px;
-}
-/* moves the menu down slightly when the admin bar displays */
-body.admin-bar .mobile-menu {
-	margin-top: 46px;
-}
-.mobile-menu ul {
-    font-size: 1.2rem;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    text-align: left;
-}
-.mobile-menu li {
-    position: relative;
-}
-.mobile-menu a {
-    text-decoration: none;
-    padding: 0.5em;
-    display: block;
-    cursor: auto;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-.mobile-menu a:hover {
-    text-decoration: none;
-}
-.mobile-menu ul ul {
-	margin-left: 2rem;
-    border-left: 2px solid #333333;
-}
-.mobile-menu ul ul ul {
-	border-left: none;
-	margin-left: 1rem;
-}
-
-.mobile-menu.mobile-menu-open {
-	right: 0px;
-}
-
-/* body classes needs to be added to make it work!! */
-.mobpush {
-	overflow-x: hidden;
-	position: relative;
-	left: 0;
-}
-/* this class is added to the body on button click */
-.mobpush-toleft {
-	left: -240px;
-}
-
-/* transitions - makes menu ease in not just appear */
-.mobile-menu,
-.mobpush {
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
 
 /* this is the break point for when the menu button shows */
 @media only screen and ( max-width: 767px ) {
-
+	
+	.primary-menu {
+	    background: #ECECEC;
+	    position: fixed;
+	    width: 240px;
+		height: 100%;
+		top: 0;
+		z-index: 1000;
+		right: -240px;
+		overflow: scroll;
+		padding-left: 8px;
+		padding-top: 8px;
+	}
+	/* moves the menu down slightly when the admin bar displays */
+	body.admin-bar .primary-menu {
+		margin-top: 46px;
+	}
+	.primary-menu ul {
+	    font-size: 1.2rem;
+	    list-style: none;
+	    margin: 0;
+	    padding-left: 0;
+	    text-align: left;
+	}
+	.primary-menu ul ul {
+		position: static;
+		float: none;
+		background-color: transparent;
+		padding: 0;
+		box-shadow: none;
+	}
+	.primary-menu li {
+	    position: relative;
+	    display: block;
+	    margin-bottom: 8px;
+	}
+	.primary-menu a {
+	    text-decoration: none;
+	    padding: 0;
+	    padding-left: 5px;
+	    margin-bottom: 8px;
+	    display: block;
+	    cursor: auto;
+	    -webkit-transition: all 0.5s ease;
+	    -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    transition: all 0.5s ease;
+	}
+	.primary-menu a:hover {
+	    text-decoration: none;
+	}
+	.primary-menu ul ul {
+		margin-left: 2rem;
+	    border-left: 2px solid #333333;
+	}
+	.primary-menu ul ul ul {
+		border-left: none;
+		margin-left: 1rem;
+	}
+	
+	.primary-menu.mobile-menu-open {
+		right: 0px;
+	}
+	
+	/* body classes needs to be added to make it work!! */
+	.mobpush {
+		overflow-x: hidden;
+		position: relative;
+		left: 0;
+	}
+	/* this class is added to the body on button click */
+	.mobpush-toleft {
+		left: -240px;
+	}
+	
+	/* transitions - makes menu ease in not just appear */
+	.primary-menu,
+	.mobpush {
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	
 	/* when windows become small enough, show button to toggle small nav and the small nav itself */
-	nav.mobile-menu,
 	#mobile-menu-icon {
         display: block;
-    }
-    
-    /* remove the main navigation when mobile nav is showing */
-    .largescreen-menu {
-	    display: none;
     }
 
 }

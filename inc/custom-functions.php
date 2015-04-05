@@ -5,7 +5,8 @@
 
 /**
  * function wpmarker_add_to_body_class()
- * adds a body class to activate the menu
+ * adds a body class to activate the mobile menu
+ * adds a no-js class which is removed with js if js is active
  * @param (array) $classes are the current body classes
  */
 function wpmarker_add_to_body_class( $classes ) {
@@ -23,31 +24,19 @@ add_filter( 'body_class', 'wpmarker_add_to_body_class' );
 
 /**
  * function wpmarker_output_mobile_menu()
- * output the mobile menu after the main menu
+ * adds the menu icon used for smaller screens
  */
 function wpmarker_output_mobile_menu( $html, $args ) {
 
-	/* check this is the main menu */
-	if( $args->theme_location != 'main_menu' ) {
+	/* check this is the main menu location */
+	if( $args->theme_location != 'primary_nav' ) {
 		return $html;
 	}
 	
 	/* add the menu icon */
-	$html .= '<div id="mobile-menu-icon" class="mobile-menu-icon"><span>Menu</span></div>';
+	$html = '<div id="mobile-menu-icon" class="mobile-menu-icon"><span>Menu</span></div>' . $html;
 	
-	/* add mobile menu to html */
-	$html .= wp_nav_menu(
-		array(
-			'container' 		=> 'div',
-			'theme_location' 	=> 'mobile_menu',
-			'container_id'		=> 'mobile-menu',
-			'container_class'	=> 'mobile-menu',
-			'menu_class'		=> 'menu-mobile-menu',
-			'menu_id'			=> 'mobile-menu-list',
-			'echo' 				=> false
-		)
-	);
-	
+	/* return the modified menu html */
 	return $html;
 	
 }
@@ -65,8 +54,8 @@ function wpmarker_fonts_url() {
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
 	
-	/* add a font */
-	//$fonts[] = 'Noto Sans:400italic,700italic,400,700';
+	/* add noto sans font */
+	$fonts[] = 'Noto Serif:400italic,700italic,400,700';
 
 	if ( $fonts ) {
 		$fonts_url = add_query_arg( array(

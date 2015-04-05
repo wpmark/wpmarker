@@ -27,9 +27,9 @@
 			
 			wp_nav_menu(
 				array(
-					'theme_location' 	=> 'main_menu',
-					'menu_id' 			=> 'main-menu',
-					'container_class'	=> 'largescreen-menu',
+					'theme_location' 	=> 'primary_nav',
+					'menu_id' 			=> 'primary-menu',
+					'container_class'	=> 'primary-menu',
 					'container_id'		=> 'site-navigation',
 					'fallback_cb'		=> false
 				)

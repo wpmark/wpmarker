@@ -35,7 +35,7 @@ function wpmarker_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 		
 	/* add image sizes */
-	add_image_size( 'post-thumb', 440, 440, true ); // add large thumbnail to support working on mobile width devices at full width
+	add_image_size( 'post-thumb', 600, 600, true ); // add large thumbnail to support working on mobile width devices at full width
 	
 	/* adds the editor stylesheet */
 	//add_editor_style( 'editor-style.css' );
@@ -70,10 +70,12 @@ function wpmarker_theme_setup() {
 	
 		/* setup default wordPress settings array - these are options stored in the options table */
 		$wpmarker_default_settings = array(
-			'image_default_link_type' => '', // images link to nothing by default
-			'thumbnail_crop' => 1, // set wordpress to crop thumbnails always
-			'users_can_register' => 0, // user can not register for this site
-			'blog_public' => 1 // make sure that the site is not blocked from search engines
+			'image_default_link_type'	=> '', // images link to nothing by default
+			'thumbnail_crop' 			=> 1, // set wordpress to crop thumbnails always
+			'users_can_register'		=> 0, // user can not register for this site
+			'blog_public'				=> 1, // make sure that the site is not blocked from search engines
+			'large_size_w'				=> '1600',
+			'large_size_h'				=> '1600'
 		);
 		
 		/* loop through each of the above, updating the option each time */

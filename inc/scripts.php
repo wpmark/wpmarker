@@ -24,7 +24,7 @@ function wpmarker_enqueue_scripts_styles() {
 		'all' // for all media types
 	);
 	
-	// Add custom fonts, used in the main stylesheet.
+	/* add custom fonts */
 	wp_enqueue_style(
 		'wpmarker_fonts',
 		wpmarker_fonts_url(),
