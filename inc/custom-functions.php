@@ -26,7 +26,7 @@ add_filter( 'body_class', 'wpmarker_add_to_body_class' );
  * function wpmarker_output_mobile_menu()
  * adds the menu icon used for smaller screens
  */
-function wpmarker_output_mobile_menu( $html, $args ) {
+function wpmarker_output_mobile_icon( $html, $args ) {
 
 	/* check this is the main menu location */
 	if( $args->theme_location != 'primary_nav' ) {
@@ -41,7 +41,7 @@ function wpmarker_output_mobile_menu( $html, $args ) {
 	
 }
 
-add_filter( 'wp_nav_menu', 'wpmarker_output_mobile_menu', 10, 2 );
+add_filter( 'wp_nav_menu', 'wpmarker_output_mobile_icon', 10, 2 );
 
 /**
  * function wpmarker_fonts_url()
