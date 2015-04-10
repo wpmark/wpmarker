@@ -1,5 +1,5 @@
 body {
-	font-family: 'Noto Serif', serif;
+	font-family: $font-family;
 	color: #333333;
 }
 
@@ -8,6 +8,7 @@ body {
  * all heading not in the .entry-content
  */
 h1, h2, h3, h4, h5, h6 {
+	font-family: $font-headings;
 	font-weight: normal;
 	margin-bottom: 16px;
 }

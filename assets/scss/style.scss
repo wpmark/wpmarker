@@ -1,60 +1,26 @@
 /*
-gridset.scss 
+dependencies
 -------------------------------------*/
-@import 'gridset';
+@import 'dependencies/gridset';
+@import 'dependencies/variables';
+@import 'dependencies/reset';
+@import 'dependencies/layout';
 
 /*
-colors.scss 
+patterns 
 -------------------------------------*/
-@import 'colors';
+@import 'patterns/buttons';
+@import 'patterns/forms';
 
 /*
-resets.scss 
+sections.scss 
 -------------------------------------*/
-@import 'resets';
+@import 'sections/main';
+@import 'sections/header';
+@import 'sections/nav';
+@import 'sections/footer';
 
 /*
-forms.scss 
+overrises 
 -------------------------------------*/
-@import 'forms';
-
-/*
-buttons.scss 
--------------------------------------*/
-@import 'buttons';
-
-/*
-layout.scss 
--------------------------------------*/
-@import 'layout';
-
-/*
-nav.scss 
--------------------------------------*/
-@import 'nav';
-
-/*
-header.scss 
--------------------------------------*/
-@import 'header';
-
-/*
-main.scss 
--------------------------------------*/
-@import 'main';
-
-/*
-footer.scss 
--------------------------------------*/
-@import 'footer';
-
-/*
-overrides
--------------------------------------*/
-.clearfix {
-	display: block;
-	clear: both;
-}
-.clearnone {
-	clear: none !important;
-}
+@import 'overrides/overrides';
