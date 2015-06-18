@@ -8,14 +8,8 @@
 	
 	<div class="entry-content">
 		
-		
+		<?php the_content(); ?>
 		
 	</div><!-- // entry-content -->
-	
-	<footer class="entry-footer">
 		
-		
-		
-	</footer><!-- // entry-footer -->
-	
 </article>
