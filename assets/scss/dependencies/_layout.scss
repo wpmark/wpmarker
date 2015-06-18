@@ -5,36 +5,42 @@
 	
 }
 
-/* desktops
+/* large desktops
 -------------------------------------------------------------- */
-@media only screen and ( min-width: 961px ) {
+@media only screen and ( min-width: 1200px )  {
 
 	.container {
-		width: 960px;
+		width: 1170px;
 	}
 
 }
 
-/* tablets
+/* smalller desktops
 -------------------------------------------------------------- */
-@media only screen and ( min-width: 768px ) and ( max-width: 960px ) {
+@media only screen and ( min-width: 980px ) and ( max-width: 1199px )  {
 	
 	.container {
-		width: 728px;
+		width: 960px;
 	}
-	.twothird,
-	.onethird {
-		width: 100%;
-		float: none;
-	}
+	
+}
+
+/* tablets (ish)
+-------------------------------------------------------------- */
+@media only screen and ( min-width: 768px ) and ( max-width: 979px )  {
+	
+	.container {
+		width: 724px;
+	}	
+	
 }
 
 /* large smart phones
 -------------------------------------------------------------- */
-@media only screen and ( max-width: 767px ) {
+@media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
 	
 	.container {
-		width: 600px;
+		width: 94%;
 	}
 	.twothird,
 	.onethird {
@@ -44,16 +50,21 @@
 	
 }
 
-
-/* smaller phones
+/* small smart phones
 -------------------------------------------------------------- */
-@media only screen and ( max-width: 599px ) {
+@media only screen and ( max-width: 479px ) {
 	
 	.container {
 		width: 90%;
 	}
+	.twothird,
+	.onethird {
+		width: 100%;
+		float: none;
+	}
 	
 }
+
 
 /* no gridset layout items
 -------------------------------------------------------------- */
