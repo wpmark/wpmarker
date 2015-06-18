@@ -5,14 +5,10 @@
  * best used when setting a page as your blog in settings > reading
  */
  
- /* get the header template */
- get_header();
- 
- 	?>
- 	
- 	
- 	
- 	<?php
- 
- /* get the footer template */
- get_footer();
+/* get the header template */
+get_header();
+
+
+
+/* get the footer template */
+get_footer();
