@@ -67,3 +67,47 @@ function wpmarker_fonts_url() {
 	return $fonts_url;
 
 }
+
+/**
+ * function wpmarker_is_greater_than_ie_9()
+ *
+ * checks the user agent to see whether the current browser is
+ * greater than internet explorer
+ */
+function wpmarker_is_greater_than_ie_9() {
+			
+	/* assume not greater than 8 to start with */
+	$output = false;
+	
+	/* check we have a user agent set */
+	if ( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) ) {
+		
+		/* is the user agent internet explorer 10 */
+		if ( strpos( $_SERVER[ 'HTTP_USER_AGENT' ], 'MSIE 10') !== false ) {
+			
+			/* this is ie10 - greater than ie9 so set output to true */
+			$output = true;
+			
+		}
+		
+		/* is the user agent internet explorer 10 */
+		if ( strpos( $_SERVER[ 'HTTP_USER_AGENT' ], 'MSIE 11') !== false ) {
+			
+			/* this is ie11 - greater than ie9 so set output to true */
+			$output = true;
+			
+		}
+		
+		/* is the user agent internet explorer 10 */
+		if ( strpos( $_SERVER[ 'HTTP_USER_AGENT' ], 'MSIE 12') !== false ) {
+			
+			/* this is ie12 - greater than ie9 so set output to true */
+			$output = true;
+			
+		}
+		
+	}
+	
+	return $output;
+	
+}
