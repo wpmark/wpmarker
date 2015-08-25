@@ -5,6 +5,32 @@
 	
 }
 
+/* no gridset layout items
+-------------------------------------------------------------- */
+.qcol {
+	float: left;
+	margin-right: 0.833333%; /* 8 / 960 */
+}
+.quarter {
+	width: 24.375%; /* 234 / 960 */
+}
+.half {
+	width: 49.583333%; /* 476 / 960 */
+}
+.threequarters {
+	width: 74.791667%; /* 718 / 960 */
+}
+.tcol {
+	float: left;
+	margin-right: 2%;
+}
+.third {
+	width: 32%;
+}
+.twothird {
+	width: 66%;
+}
+
 /* large desktops
 -------------------------------------------------------------- */
 @media only screen and ( min-width: 1200px )  {
@@ -43,7 +69,8 @@
 		width: 94%;
 	}
 	.twothird,
-	.onethird {
+	.third,
+	.quarter {
 		width: 100%;
 		float: none;
 	}
@@ -58,36 +85,10 @@
 		width: 90%;
 	}
 	.twothird,
-	.onethird {
+	.third,
+	.quarter {
 		width: 100%;
 		float: none;
 	}
 	
-}
-
-
-/* no gridset layout items
--------------------------------------------------------------- */
-.qcol {
-	float: left;
-	margin-right: 0.833333%; /* 8 / 960 */
-}
-.quarter {
-	width: 24.375%; /* 234 / 960 */
-}
-.half {
-	width: 49.583333%; /* 476 / 960 */
-}
-.threequarters {
-	width: 74.791667%; /* 718 / 960 */
-}
-.tcol {
-	float: left;
-	margin-right: 2%;
-}
-.third {
-	width: 32%;
-}
-.twothird {
-	width: 66%;
 }

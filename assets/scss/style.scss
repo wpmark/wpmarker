@@ -1,6 +1,7 @@
 /*
 dependencies
 -------------------------------------*/
+@import 'dependencies/normalize';
 @import 'dependencies/variables';
 @import 'dependencies/reset';
 @import 'dependencies/layout';
@@ -17,6 +18,7 @@ sections.scss
 @import 'sections/main';
 @import 'sections/header';
 @import 'sections/nav';
+@import 'sections/sidebar';
 @import 'sections/footer';
 
 /*

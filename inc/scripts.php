@@ -49,7 +49,14 @@ function wpmarker_enqueue_scripts_styles() {
 	     * <!--[if gt IE 9]> ... <![endif]-->
 	     */
 	    if( wpmarker_is_greater_than_ie_9() == true ) {
+			
 			wp_enqueue_style( 'wpmarker_gt_ie9_gridset', get_template_directory_uri(). '/assets/css/gridset.css', array( 'wpmarker_styles' ), array(), 'all' );
+	    
+	    } else {
+		    
+		    /* loads gridset for non IE browsers */
+			wp_enqueue_style( 'wpmarker_non_ie_gridset', get_template_directory_uri(). '/assets/css/gridset.css', array( 'wpmarker_styles' ), array(), 'all' );
+		    
 	    }
 	
 	/* browser is not IE */
